@@ -1,4 +1,5 @@
 function calculate(){
+//Here is a random comment
 	var points = 0; 
 	var i = 0; 
     
