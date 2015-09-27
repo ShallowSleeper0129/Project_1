@@ -1,0 +1,42 @@
+function calculate(){
+	var points = 0; 
+	var i = 0; 
+    
+    var groups = ["a", "b"]; 
+    
+    for(var j = 0; j < groups.length; j++){
+
+        var group1 = document.getElementsByName(groups[j]); 
+
+        for(i = 0; i < group1.length; i++){
+
+            if(group1[i].checked){
+                var val = group1[i].value;
+                val = Number(val); 
+                points += val
+            }
+        }
+    }
+
+    var house; 
+
+    if(points == 12)
+    	house = "Gryffindor"; 
+    else if (points <= 11 && points > 8)
+    	house = "Slytherin" 
+    else if(points <= 8 && points > 4)
+    	house = "Hufflepuff"
+    else
+    	house = "Ravenclaw"; 
+
+    var loc = document.getElementById("image"); 
+
+    switch(house){
+    	case "Gryffindor": 
+    		loc.src = 'http://graffitialphabet.org/letter-a/crazy-graffiti-alphabet-a.jpg'; 
+    		break; 
+    	case "Slytherin": 
+    		loc.src = 'http://vignette1.wikia.nocookie.net/harrypotter/images/d/da/S_final.jpg/revision/latest?cb=20111027165212';
+    		break; 
+    }
+}
